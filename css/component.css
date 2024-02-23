@@ -1,0 +1,94 @@
+.rb-grid {
+	list-style: none;
+	text-align: center;
+	margin: 0 auto;
+	
+}
+
+.rb-grid li {
+	width: 33.333333%;
+	display: block;
+	float: left;
+	cursor: pointer;
+	position: relative;
+	margin:0 auto;
+	text-align: center;
+	background:none;
+}
+
+.rb-grid li.centro { margin-left:15%;}
+.rb-overlay {
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 110%;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	z-index: -1;
+	pointer-events: none;
+	cursor: default;
+}
+
+.rb-close {
+	position: absolute;
+	top: 1em;
+	right:1em;
+	width: 2em;
+	height: 2em;
+	text-indent: -9000px;
+	cursor: pointer;
+	z-index: 1000;
+	color:#174892;
+}
+
+.rb-close::before {
+	content: 'x';
+	font-weight: 100;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 3em;
+	line-height: 0.6;
+	text-align: center;
+	text-indent: 0px;
+}
+
+.rb-week {
+	width: 100%;
+	height: 110%;
+	overflow:auto;
+	padding-bottom:50px;
+}
+
+.rb-week > div {
+	width: 100%;
+	height: 110%;
+	float: left;
+	position: absolute;
+	overflow:auto;
+	padding-bottom:50px;
+	}
+
+
+.rb-week span {
+	font-size: 2em;
+	font-weight: 100;
+	display: block;
+	margin: auto 0;
+	width: 100%;
+}
+
+/* Overlay Columns */
+.rb-grid li:nth-child(1) .rb-week > div:nth-child(1) { background:url(../imagens/back.jpg) no-repeat;  background-size:auto;}
+.rb-grid li:nth-child(2) .rb-week > div:nth-child(1) { background:url(../imagens/back.jpg) no-repeat;  background-size:auto;}
+.rb-grid li:nth-child(3) .rb-week > div:nth-child(1) { background:url(../imagens/back.jpg) no-repeat;  background-size:auto;}
+.rb-grid li:nth-child(4) .rb-week > div:nth-child(1) { background:url(../imagens/back.jpg) no-repeat;  background-size:auto;}
+.rb-grid li:nth-child(5) .rb-week > div:nth-child(1) { background:url(../imagens/back.jpg) no-repeat;  background-size:auto;}
+.rb-grid li:nth-child(6) .rb-week > div:nth-child(1) { background:url(../imagens/back.jpg) no-repeat;  background-size:auto;}
+@media screen and (max-width:980px) { .rb-grid li { width: 50%; text-align:center;} .rb-grid li.centro{ margin:0 auto;}}
+@media screen and (max-width:500px) { .rb-grid li { width: 100%; text-align:center;}}
